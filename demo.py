@@ -15,9 +15,9 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI()
 
-PROXMOX_HOST = "https://10.0.1.10:8006"
-USERNAME = "shuvechhya@pve"
-PASSWORD = "Nepal1234$#@!#"
+PROXMOX_HOST = "proxmox_host"
+USERNAME = "username"
+PASSWORD = "password"
 VERIFY_SSL = False
 
 if not VERIFY_SSL:
