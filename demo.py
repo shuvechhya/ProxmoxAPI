@@ -6,18 +6,18 @@ import urllib3
 from urllib.parse import quote
 import logging
 from dotenv import load_dotenv
-# import os
+import os
 
-# load_dotenv()
+load_dotenv()
 
 logging.basicConfig(level=logging.INFO)  # Changed from DEBUG to INFO for cleaner logs
 logger = logging.getLogger(__name__)
 
 app = FastAPI()
 
-PROXMOX_HOST = "proxmox_host"
-USERNAME = "username"
-PASSWORD = "password"
+PROXMOX_HOST = os.getenv("PROXMOX_HOST")
+USERNAME = os.getenv("USERNAME")
+PASSWORD = os.getenv("PASSWORD")
 VERIFY_SSL = False
 
 if not VERIFY_SSL:
